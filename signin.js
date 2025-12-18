@@ -19,27 +19,40 @@ $(document).ready(function () {
     }
   });
 
+  
+
   // LOGIN validation
-  $(".login form").submit(function (e) {
+$(".login form").submit(function (e) {
     e.preventDefault();
     let valid = true;
 
     $(this).find(".error-msg").remove();
 
     $(this).find("input").each(function () {
-      if ($(this).val().trim() === "") {
-        valid = false;
-        showError($(this), "This field is required");
-      }
+        let value = $(this).val().trim();
+
+        if (value === "") {
+            valid = false;
+            showError($(this), "This field is required");
+        }
+
+        // Email format check
+        if ($(this).attr("type") === "email" && value !== "") {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(value)) {
+                valid = false;
+                showError($(this), "Please enter a valid email");
+            }
+        }
     });
 
     if (valid) {
-      alert("Login successful");
+        alert("Login successful");
     }
-  });
+});
 
-  // SIGN IN validation
-  $(".signin form").submit(function (e) {
+// SIGN IN validation
+$(".signin form").submit(function (e) {
     e.preventDefault();
     let valid = true;
 
@@ -48,28 +61,45 @@ $(document).ready(function () {
     let password = $(this).find("input[type='password']").eq(0);
     let confirmPassword = $(this).find("input[type='password']").eq(1);
 
-    // Required fields check
+    // Required fields and email check
     $(this).find("input").each(function () {
-      if ($(this).val().trim() === "") {
-        valid = false;
-        showError($(this), "This field is required");
-      }
+        let value = $(this).val().trim();
+
+        if (value === "") {
+            valid = false;
+            showError($(this), "This field is required");
+        }
+
+        // Email format check
+        if ($(this).attr("type") === "email" && value !== "") {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(value)) {
+                valid = false;
+                showError($(this), "Please enter a valid email");
+            }
+        }
     });
+
+    // Password length check
+    if (password.val().trim() !== "" && password.val().length < 8) {
+        valid = false;
+        showError(password, "Password must be at least 8 characters");
+    }
 
     // Password match check
     if (
-      password.val().trim() !== "" &&
-      confirmPassword.val().trim() !== "" &&
-      password.val() !== confirmPassword.val()
+        password.val().trim() !== "" &&
+        confirmPassword.val().trim() !== "" &&
+        password.val() !== confirmPassword.val()
     ) {
-      valid = false;
-      showError(confirmPassword, "Passwords do not match");
+        valid = false;
+        showError(confirmPassword, "Passwords do not match");
     }
 
     if (valid) {
-      alert("Sign in successful");
+        alert("Sign in successful");
     }
-  });
+});
 
   // Function to show error with animation
   function showError(input, message) {
@@ -83,4 +113,3 @@ $(document).ready(function () {
   }
 
 });
-
