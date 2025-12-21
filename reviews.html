@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews | TechCrunch</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <style>
         /* KJO PJESË E HEQ BARDHËSINË DHE MBULON KREJT EKRANIN */
         html, body {
             margin: 0;
             padding: 0;
             width: 100%;
-            min-height: 100vh; /* E detyron sfondin të shtrihet deri në fund */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
                         url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
@@ -20,14 +23,18 @@
             font-family: 'Segoe UI', sans-serif;
         }
 
-        /* NAVBAR MODERNE */
+        /* NAVBAR MODERNE - E NJËJTË SI TE FAQET TJERA */
         nav {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px 0;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
             display: flex;
             justify-content: center;
-            gap: 25px;
-            border-bottom: 2px solid #c55151;
+            align-items: center;
+            gap: 30px;
+            border-bottom: 3px solid #c55151;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav a {
@@ -35,47 +42,94 @@
             text-decoration: none;
             font-weight: bold;
             text-transform: uppercase;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             transition: 0.3s;
         }
 
         nav a:hover { color: #c55151; }
 
+        .logo-nav {
+            color: #c55151 !important;
+            font-size: 1.5rem !important;
+            letter-spacing: 1px;
+            margin-right: 20px;
+        }
+
         .container {
             max-width: 1000px;
             margin: 50px auto;
             padding: 20px;
+            flex-grow: 1; /* E shtyn footerin poshte */
         }
 
-        h1 { text-align: center; color: #c55151; margin-bottom: 30px; }
+        h1 { text-align: center; color: #c55151; margin-bottom: 40px; font-size: 2.5rem; }
 
         /* TABELA ME EFEKT XHAMI */
         table {
             width: 100%;
             border-collapse: collapse;
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        th { background: #c55151; padding: 15px; text-align: left; }
-        td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        th { 
+            background: #c55151; 
+            padding: 18px; 
+            text-align: left; 
+            text-transform: uppercase; 
+            font-size: 0.85rem; 
+            letter-spacing: 1px;
+        }
+
+        td { 
+            padding: 18px; 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+            font-size: 1.05rem;
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
 
         .read-btn {
             background: #c55151;
             color: white;
-            padding: 6px 12px;
+            padding: 8px 16px;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 6px;
             font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
         }
+
+        .read-btn:hover {
+            background: #e06060;
+            transform: scale(1.05);
+        }
+
+        /* FOOTER ME EMRIN TËND */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: #888;
+            text-align: center;
+            padding: 40px 0;
+            border-top: 2px solid #c55151;
+            margin-top: 50px;
+        }
+
+        .footer-names { color: #ffffff; margin-bottom: 10px; font-size: 1.1rem; }
+        .footer-names b { color: #c55151; }
+        .social-icons a { color: #c55151; font-size: 1.5rem; margin: 0 10px; text-decoration: none; }
     </style>
 </head>
 <body>
 
     <nav>
+        <a href="index.html" class="logo-nav">TechCrunch</a>
         <a href="index.html">Home</a>
         <a href="reviews.html" style="color: #c55151;">Reviews</a>
         <a href="profile.html">Profile</a>
@@ -95,28 +149,43 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>iPhone 15 Pro</td>
+                    <td><i class="ri-smartphone-line"></i> iPhone 15 Pro</td>
                     <td>Smartphone</td>
-                    <td>⭐⭐⭐⭐⭐</td>
+                    <td style="color: #f1c40f;">⭐⭐⭐⭐⭐</td>
                     <td>999€</td>
-                    <td><a href="post1.html" class="read-btn">Lexo</a></td>
+                    <td><a href="post1.html" class="read-btn">Lexo Artikullin</a></td>
                 </tr>
                 <tr>
-                    <td>MacBook Air M2</td>
+                    <td><i class="ri-macbook-line"></i> MacBook Air M2</td>
                     <td>Laptop</td>
-                    <td>⭐⭐⭐⭐⭐</td>
+                    <td style="color: #f1c40f;">⭐⭐⭐⭐⭐</td>
                     <td>1199€</td>
-                    <td><a href="post2.html" class="read-btn">Lexo</a></td>
+                    <td><a href="post2.html" class="read-btn">Lexo Artikullin</a></td>
                 </tr>
                 <tr>
-                    <td>Sony WH-1000XM5</td>
+                    <td><i class="ri-headphones-line"></i> Sony WH-1000XM5</td>
                     <td>Kufje</td>
-                    <td>⭐⭐⭐⭐☆</td>
+                    <td style="color: #f1c40f;">⭐⭐⭐⭐☆</td>
                     <td>350€</td>
-                    <td><a href="post3.html" class="read-btn">Lexo</a></td>
+                    <td><a href="post3.html" class="read-btn">Lexo Artikullin</a></td>
                 </tr>
             </tbody>
         </table>
     </main>
+
+    <footer>
+        <div class="footer-names">
+            &copy; 2025 TechCrunch Blog - Punuar nga <b>Grejona</b> & <b>Jeta</b>
+        </div>
+        <p>Projekti Grupor | Lënda: Teknologji | Tabela e Vlerësimeve</p>
+        <div class="social-icons">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <a href="#"><i class="ri-linkedin-box-line"></i></a>
+        </div>
+    </footer>
+
 </body>
 </html>
+     
+       
