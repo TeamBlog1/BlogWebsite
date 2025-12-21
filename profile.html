@@ -1,115 +1,115 @@
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profili i Autorit | Blogu Im</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Profile | TechCrunch</title>
     <style>
-        /* CSS Grid & Flexbox (Pika 4) */
-        .profile-main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px;
-            background-color: #f8f9fa;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s ease; 
-            max-width: 600px;
-            margin-bottom: 30px;
-        }
-        .card:hover { transform: translateY(-5px); } 
-
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 15px;
+        /* KY KOD ZHDUK BARDHËSINË */
+        html, body {
+            margin: 0;
+            padding: 0;
             width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                        url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            border-bottom: 2px solid #c55151;
+        }
+
+        nav a { color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        nav a:hover { color: #c55151; }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .tech-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
             margin-top: 20px;
         }
 
-        .skill-card {
-            background: #252830;
-            color: white;
-            border-radius: 8px;
-            padding: 12px;
-            font-size: 14px;
-            transition: background 0.3s;
+        .tag {
+            background: #c55151;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
-        .skill-card:hover { background: #c55151; }
 
-        .error-msg { color: #e74c3c; font-size: 13px; margin-top: 5px; }
-        .success-msg { color: #2ecc71; font-size: 13px; margin-top: 5px; }
+        .contact-box {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 60%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #c55151;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <nav style="padding: 20px; text-align: center;">
-            <a href="index.html" style="text-decoration: none; color: #333; font-weight: bold;">← Kthehu te Ballina</a>
-        </nav>
-    </header>
 
-    <main class="profile-main">
-        <section class="card">
-            <h1>Eksploro Punën e Autorit</h1>
-            <p id="teksti">Ky profil tregon aftësitë teknike të përdorura në këtë blog.</p>
-            <button id="btn-ndrysho" style="padding: 10px 20px; cursor: pointer;">Shfaq Statusin</button>
-        </section>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="profile.html" style="color: #c55151;">Profile</a>
+    </nav>
 
-        <section style="width:100%; max-width: 800px; text-align:center;">
-            <h2>Teknologjitë e Përdorura</h2>
-            <div id="skills-grid" class="skills-container"></div>
-        </section>
+    <div class="profile-container">
+        <h1>Eksploro Punën e Autorit</h1>
+        <p>Ky profil tregon aftësitë teknike të përdorura në këtë blog.</p>
+        
+        <div class="tech-tags">
+            <span class="tag">HTML5 Semantics</span>
+            <span class="tag">CSS Grid</span>
+            <span class="tag">Flexbox Layout</span>
+            <span class="tag">JavaScript ES6</span>
+            <span class="tag">Git/GitHub</span>
+        </div>
 
-        <section class="card" style="margin-top:40px;">
+        <div class="contact-box">
             <h3>Na Kontaktoni</h3>
             <p>Për çdo pyetje rreth artikujve, na shkruani:</p>
-            <div style="margin-top: 15px;">
-                <input type="email" id="emailInput" placeholder="Email-i juaj..." style="padding: 8px; width: 70%;">
-                <button onclick="validoFormen()" style="padding: 8px;">Dërgo</button>
-                <p id="msg" style="display:none;"></p>
-            </div>
-        </section>
-    </main>
+            <input type="email" placeholder="Email-i juaj...">
+            <button>Dërgo</button>
+        </div>
+    </div>
 
-    <script>
-        // Pika 5: Manipulimi i DOM
-        document.getElementById('btn-ndrysho').onclick = function() {
-            const t = document.getElementById('teksti');
-            t.innerHTML = "Sistemi është plotësisht funksional dhe i validuar.";
-            t.style.fontWeight = "bold";
-            this.style.display = "none";
-        };
-
-        // Pika 5: Array dhe Map (Kërkesë teknike)
-        const aftesite = ['HTML5 Semantics', 'CSS Grid', 'Flexbox Layout', 'JavaScript ES6', 'Git/GitHub'];
-        const grid = document.getElementById('skills-grid');
-
-        grid.innerHTML = aftesite.map(a => `
-            <div class="skill-card">${a}</div>
-        `).join('');
-
-        // Pika 5: Validimi i Formës (E detyrueshme për pikët)
-        function validoFormen() {
-            const email = document.getElementById('emailInput').value;
-            const msg = document.getElementById('msg');
-
-            if (email.includes('@') && email.length > 5) {
-                msg.innerHTML = "Mesazhi u procesua me sukses!";
-                msg.className = "success-msg";
-            } else {
-                msg.innerHTML = "Ju lutem shkruani një email valid.";
-                msg.className = "error-msg";
-            }
-            msg.style.display = "block";
-        }
-    </script>
 </body>
-</html
+</html>
