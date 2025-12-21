@@ -5,39 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review: Sony WH-1000XM5 | TechCrunch</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #ffffff;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        /* ... të njëjtat stile si më lart ... */
+        .header { background: rgba(26, 28, 34, 0.95); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #c55151; }
+        .container { max-width: 800px; margin: 120px auto 50px auto; background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .highlight-box { background: rgba(197, 81, 81, 0.1); padding: 20px; border-radius: 10px; border-left: 5px solid #c55151; margin-bottom: 30px; color: white; }
+        h1 { color: #c55151; }
+        .back-link { display: inline-block; margin-top: 40px; color: #ffffff; text-decoration: none; background: #c55151; padding: 10px 20px; border-radius: 5px; }
+    </style>
 </head>
 <body>
     <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="logo">Tech<span>Crunch</span></a>
-            <div class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="reviews.html" class="nav__link">Reviews</a></li>
-                    <li class="nav__item"><a href="profile.html" class="nav__link">Profile</a></li>
-                </ul>
-            </div>
+        <nav style="display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+            <a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: bold; font-size: 1.8rem;">Tech<span style="color: #c55151;">Crunch</span></a>
+            <ul style="list-style: none; display: flex; gap: 30px;">
+                <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+                <li><a href="reviews.html" style="color: white; text-decoration: none;">Reviews</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="container" style="margin-top: 120px; max-width: 800px; margin-left: auto; margin-right: auto;">
+    <main class="container">
         <article>
-            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Sony WH-1000XM5: Mbreti i heshtjes</h1>
-            <p style="color: #888; margin-bottom: 30px;">Publikuar më: 19 Dhjetor, 2025</p>
+            <h1>Sony WH-1000XM5: Mbreti i heshtjes</h1>
+            <p style="color: #bbb;">Publikuar më: 19 Dhjetor, 2025</p>
             
-            <p style="line-height: 1.8; margin-bottom: 20px;">
-                Nëse kërkoni kufje që bllokojnë çdo zhurmë të ambientit, Sony XM5 janë padyshim zgjedhja e parë. Me një dizajn të ri dhe mikrofonë të përmirësuar, këto janë kufjet më të mira për udhëtime dhe punë në zyrë.
-            </p>
+            <div class="highlight-box">
+                <p><i>"Nëse doni të izoloni botën dhe të dëgjoni vetëm muzikën tuaj, këto janë kufjet që ju duhen."</i></p>
+            </div>
 
-            <h2 style="color: #c55151;">Pse na pëlqejnë?</h2>
-            <ul style="line-height: 1.8;">
-                <li>✅ Izolimi i zhurmës (ANC) më i miri në treg.</li>
-                <li>✅ Cilësi audio e kristaltë për thirrje.</li>
-                <li>✅ Bateria zgjat mbi 30 orë me një karikim.</li>
+            <p>Sistemi i anulimit të zhurmës (Noise Cancelling) te Sony XM5 është i pakonkurrueshëm. Janë perfekte për udhëtime në aeroplan ose kur punoni në një ambient të zhurmshëm.</p>
+
+            <h2 style="color: #c55151;">Pikat e Forta:</h2>
+            <ul>
+                <li>✅ Izolimi i zhurmës më i miri në botë.</li>
+                <li>✅ Cilësi audio hi-res.</li>
+                <li>✅ Shume komode për t'u mbajtur gjatë.</li>
             </ul>
 
-            <div style="margin-top: 50px; text-align: center;">
-                <a href="reviews.html" style="color: #c55151; text-decoration: none; font-weight: bold;">← Kthehu te Tabela e Reviews</a>
+            <div style="text-align: center;">
+                <a href="reviews.html" class="back-link">← Kthehu te Reviews</a>
             </div>
         </article>
     </main>
