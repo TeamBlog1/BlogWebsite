@@ -5,38 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review: MacBook Air M2 | TechCrunch</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #ffffff;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1517336714460-45735f5242d5?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .header {
+            background: rgba(26, 28, 34, 0.95);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #c55151;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 120px auto 50px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .highlight-box {
+            background: rgba(197, 81, 81, 0.1); 
+            padding: 20px; 
+            border-radius: 10px; 
+            border-left: 5px solid #c55151; 
+            margin-bottom: 30px; 
+            color: white;
+        }
+
+        h1 { color: #c55151; }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: #ffffff;
+            text-decoration: none;
+            background: #c55151;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="logo">Tech<span>Crunch</span></a>
-            <div class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="reviews.html" class="nav__link">Reviews</a></li>
-                </ul>
-            </div>
+        <nav style="display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+            <a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: bold; font-size: 1.8rem;">Tech<span style="color: #c55151;">Crunch</span></a>
+            <ul style="list-style: none; display: flex; gap: 30px;">
+                <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+                <li><a href="reviews.html" style="color: white; text-decoration: none;">Reviews</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="container" style="margin-top: 120px; max-width: 800px; margin-left: auto; margin-right: auto;">
+    <main class="container">
         <article>
-            <h1 style="font-size: 2.5rem; margin-bottom: 20px;">MacBook Air M2: Laptopi ideal për studentë</h1>
-            <p style="color: #888; margin-bottom: 30px;">Publikuar më: 20 Dhjetor, 2025</p>
+            <h1>MacBook Air M2: Laptopi ideal për studentë</h1>
+            <p style="color: #bbb;">Publikuar më: 20 Dhjetor, 2025</p>
             
-            <p style="line-height: 1.8; margin-bottom: 20px;">
-                Me dizajnin e ri dhe procesorin M2, ky laptop është bërë i preferuari i të gjithëve. Është jashtëzakonisht i hollë, nuk nxehet asnjëherë dhe bateria zgjat deri në 18 orë.
-            </p>
+            <div class="highlight-box">
+                <p><i>"Dizajni i ri dhe bateria që zgjat gjithë ditën e bëjnë këtë laptop mbretin e tregut."</i></p>
+            </div>
 
-            <h2 style="color: #c55151;">Pse ta blini?</h2>
-            <ul style="line-height: 1.8;">
-                <li>✅ Ekran Liquid Retina shumë i qartë.</li>
-                <li>✅ Pesha shumë e lehtë për ta mbajtur kudo.</li>
-                <li>✅ Performancë e shpejtë për punë të përditshme.</li>
+            <p>Me procesorin M2, ky laptop përballon çdo detyrë pa u nxehur fare. Është aq i hollë sa mund ta mbani në çantë pa e ndjerë fare peshën e tij.</p>
+
+            <h2 style="color: #c55151;">Pikat e Forta:</h2>
+            <ul>
+                <li>✅ Ekran Liquid Retina fantastik.</li>
+                <li>✅ Bateri që zgjat deri në 18 orë.</li>
+                <li>✅ Punon pa asnjë zhurmë (pa ventilator).</li>
             </ul>
-            
-            <div style="margin-top: 50px; text-align: center;">
-                <a href="reviews.html" style="color: #c55151; text-decoration: none; font-weight: bold;">← Kthehu te Reviews</a>
+
+            <div style="text-align: center;">
+                <a href="reviews.html" class="back-link">← Kthehu te Reviews</a>
             </div>
         </article>
     </main>
