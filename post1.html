@@ -1,3 +1,10 @@
+Për ta hequr atë sfondin e bardhë të mërzitshëm dhe për ta bërë uebsajtin të duket modern si një revistë teknologjie, do të përdorim një gradient të errët dhe një foto teknologjike në sfond.
+
+Ky kod do t'i japë të njëjtën pamje të gjitha faqeve tua (post1, post2, post3).
+
+1. Kodi i plotë për post1.html (Zëvendësoje të gjithin)
+HTML
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,40 +18,46 @@
             line-height: 1.6;
             margin: 0;
             color: #ffffff;
-            /* Këtu vendoset fotoja e background-it */
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            /* FOTOJA DHE NGJYRA E SFONDIT */
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                        url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Fotoja rri fiks kur ti bën scroll */
+            background-attachment: fixed;
         }
 
         .header {
-            background: rgba(26, 28, 34, 0.95);
+            background: rgba(20, 20, 25, 0.95);
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #c55151;
+            border-bottom: 2px solid #c55151;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 120px auto 50px auto;
-            background: rgba(255, 255, 255, 0.05); /* Sfondi i artikullit pak transparent */
+            /* KËTU E HEQIM BARDHËSINË - bëhet transparent me efekt xhami */
+            background: rgba(255, 255, 255, 0.05); 
             padding: 40px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px); /* Efekt i turbullt prapa tekstit */
+            border-radius: 20px;
+            backdrop-filter: blur(15px); /* Efekti 'Glassmorphism' */
             border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
 
+        h1 { color: #c55151; font-size: 2.8rem; margin-top: 0; }
+        h2 { color: #c55151; border-bottom: 1px solid #c55151; padding-bottom: 5px; }
+        p { color: #f0f0f0; font-size: 1.15rem; }
+
         .highlight-box {
-            background: rgba(197, 81, 81, 0.1); 
-            padding: 20px; 
-            border-radius: 10px; 
-            border-left: 5px solid #c55151; 
-            margin-bottom: 30px; 
+            background: rgba(197, 81, 81, 0.15); 
+            padding: 25px; 
+            border-radius: 12px; 
+            border-left: 6px solid #c55151; 
+            margin: 30px 0;
         }
 
         .highlight-box p {
@@ -54,27 +67,25 @@
             margin: 0;
         }
 
-        h1 { color: #c55151; font-size: 2.5rem; }
-        h2 { color: #c55151; margin-top: 30px; }
-        p { color: #e0e0e0; font-size: 1.1rem; }
-        
+        ul { list-style: none; padding: 0; }
+        ul li { margin-bottom: 15px; font-size: 1.1rem; padding-left: 10px; }
+
         .back-link {
             display: inline-block;
             margin-top: 40px;
             color: #ffffff;
             text-decoration: none;
             background: #c55151;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
             transition: 0.3s;
         }
 
         .back-link:hover {
-            background: #a34141;
-            transform: translateY(-2px);
+            background: #e06060;
+            transform: scale(1.05);
         }
-
-        ul li { margin-bottom: 10px; font-size: 1.05rem; }
     </style>
 </head>
 <body>
@@ -82,9 +93,8 @@
         <nav style="display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
             <a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: bold; font-size: 1.8rem;">Tech<span style="color: #c55151;">Crunch</span></a>
             <ul style="list-style: none; display: flex; gap: 30px; margin: 0; padding: 0;">
-                <li><a href="index.html" style="text-decoration: none; color: #ffffff;">Home</a></li>
-                <li><a href="reviews.html" style="text-decoration: none; color: #ffffff;">Reviews</a></li>
-                <li><a href="profile.html" style="text-decoration: none; color: #ffffff;">Profile</a></li>
+                <li><a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Home</a></li>
+                <li><a href="reviews.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Reviews</a></li>
             </ul>
         </nav>
     </header>
@@ -92,25 +102,25 @@
     <main class="container">
         <article>
             <h1>iPhone 15 Pro: A është vërtet titan?</h1>
-            <p style="color: #bbb;">Publikuar më: 21 Dhjetor, 2025 • Nga: Jeta (Autore)</p>
+            <p style="color: #bbb; font-size: 0.9rem;">21 Dhjetor, 2025 • Rishikuar nga Autori</p>
             
             <div class="highlight-box">
-                <p>"Ky është celulari më i fuqishëm që Apple ka ndërtuar ndonjëherë, por a ia vlen çmimin prej 999€?"</p>
+                <p>"Performanca e titanit vjen me një çmim të lartë, por për përdoruesit profesionalë, është investimi i duhur."</p>
             </div>
 
             <p>
-                Apple ka prezantuar materialin e ri të titanit në iPhone 15 Pro, duke e bërë atë më të lehtë dhe më rezistent. Gjatë testimit tonë, vumë re që performanca e procesorit A17 Pro është e pakrahasueshme për lojëra dhe punë profesionale.
+                Materiali i ri i titanit nuk është vetëm për pamje. Ai e bën iPhone 15 Pro telefonin më të lehtë 'Pro' që Apple ka prodhuar ndonjëherë, ndërsa procesori A17 Pro hap dyert për lojëra që më parë ishin të mundshme vetëm në konsola.
             </p>
 
-            <h2>Pikat e Forta:</h2>
+            <h2>Pikat kryesore:</h2>
             <ul>
-                <li>✅ Kornizë titani shumë e lehtë dhe elegante.</li>
-                <li>✅ Kamera me zmadhim optik fantastik për foto natën.</li>
-                <li>✅ Porti i ri USB-C që lehtëson karikimin.</li>
+                <li>🚀 <strong>Procesori:</strong> Shpejtësia më e lartë në industrinë e telefonave.</li>
+                <li>📸 <strong>Kamera:</strong> Zmadhim optik 5x që nuk humb detajet.</li>
+                <li>🔋 <strong>Bateria:</strong> Mjaftueshëm për një ditë intensive pune.</li>
             </ul>
 
             <div style="text-align: center;">
-                <a href="reviews.html" class="back-link">← Kthehu te të gjitha rishikimet</a>
+                <a href="reviews.html" class="back-link">← Kthehu te Tabela</a>
             </div>
         </article>
     </main>
