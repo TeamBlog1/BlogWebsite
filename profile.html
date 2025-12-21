@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profili Im</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* CSS3 Flexbox për layout */
+        .profile-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s; 
+        }
+        .card:hover { transform: scale(1.05); } 
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Ballina</a>
+        </nav>
+    </header>
+
+    <main class="profile-main">
+        <section class="card">
+            <h1>Profili i Autorit</h1>
+            <p id="teksti">Mirësevini në pjesën time të projektit!</p>
+            <button id="btn-ndrysho">Më kliko</button>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript bazik (DOM manipulation)
+        document.getElementById('btn-ndrysho').onclick = function() {
+            document.getElementById('teksti').innerHTML = "Bravo! JavaScript po punon.";
+            document.getElementById('teksti').style.color = "green";
+        };
+    </script>
+</body>
+</html>
