@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review: Sony WH-1000XM5 | TechCrunch</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="main.css">
     <style>
-        body {
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 0;
             color: #ffffff;
             /* FOTOJA E SFONDIT PËR KUFJE */
             background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
@@ -22,26 +27,42 @@
         .header {
             background: rgba(20, 20, 25, 0.95);
             padding: 1rem 0;
-            position: fixed;
-            width: 100%;
+            position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 2px solid #c55151;
+            border-bottom: 3px solid #c55151;
         }
+
+        .nav-container {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 0 20px;
+        }
+
+        .logo { text-decoration: none; color: #ffffff; font-weight: bold; font-size: 1.8rem; }
+        .logo span { color: #c55151; }
+
+        .nav-list { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+        .nav-list a { text-decoration: none; color: #ffffff; font-weight: 500; transition: 0.3s; }
+        .nav-list a:hover { color: #c55151; }
 
         .container {
             max-width: 850px;
-            margin: 120px auto 50px auto;
+            margin: 50px auto;
             background: rgba(255, 255, 255, 0.05); 
             padding: 40px;
             border-radius: 20px;
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            flex-grow: 1; /* Garanton që faqja mbushet dhe nuk mbetet bardhë */
         }
 
         h1 { color: #c55151; font-size: 2.8rem; margin-top: 0; }
-        h2 { color: #c55151; border-bottom: 1px solid #c55151; padding-bottom: 5px; }
+        h2 { color: #c55151; border-bottom: 1px solid #c55151; padding-bottom: 5px; margin-top: 30px; }
         p { color: #f0f0f0; font-size: 1.15rem; }
 
         .highlight-box {
@@ -50,17 +71,8 @@
             border-radius: 12px; 
             border-left: 6px solid #c55151; 
             margin: 30px 0;
-        }
-
-        .highlight-box p {
-            color: #ffffff !important;
             font-style: italic;
-            font-size: 1.2rem;
-            margin: 0;
         }
-
-        ul { list-style: none; padding: 0; }
-        ul li { margin-bottom: 15px; font-size: 1.1rem; }
 
         .back-link {
             display: inline-block;
@@ -74,19 +86,32 @@
             transition: 0.3s;
         }
 
-        .back-link:hover {
-            background: #e06060;
-            transform: scale(1.05);
+        .back-link:hover { background: #e06060; transform: translateY(-3px); }
+
+        /* FOOTER I NJËJTË SI TE TË GJITHA FAQET */
+        footer {
+            background: rgba(20, 20, 25, 0.98);
+            color: #888;
+            text-align: center;
+            padding: 40px 0;
+            border-top: 2px solid #c55151;
+            margin-top: 50px;
         }
+
+        .footer-names { color: #ffffff; margin-bottom: 10px; font-size: 1.1rem; }
+        .footer-names b { color: #c55151; }
+        .social-icons a { color: #c55151; font-size: 1.5rem; margin: 0 10px; text-decoration: none; }
     </style>
 </head>
 <body>
+
     <header class="header">
-        <nav style="display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-            <a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: bold; font-size: 1.8rem;">Tech<span style="color: #c55151;">Crunch</span></a>
-            <ul style="list-style: none; display: flex; gap: 30px; margin: 0; padding: 0;">
-                <li><a href="index.html" style="text-decoration: none; color: #ffffff;">Home</a></li>
-                <li><a href="reviews.html" style="text-decoration: none; color: #ffffff;">Reviews</a></li>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">Tech<span>Crunch</span></a>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="profile.html">Profile</a></li>
             </ul>
         </nav>
     </header>
@@ -101,20 +126,34 @@
             </div>
 
             <p>
-                Sony ka arritur të përmirësojë përsëri atë që dukej e pamundur. Modeli WH-1000XM5 vjen me një dizajm më elegant dhe me një sistem të ri mikrofonash që e bëjnë kualitetin e thirrjeve më të mirin në treg.
+                Sony ka arritur të përmirësojë përsëri atë që dukej e pamundur. Modeli WH-1000XM5 vjen me një dizajn më elegant dhe me një sistem të ri mikrofonash që e bëjnë kualitetin e thirrjeve më të mirin në treg.
             </p>
 
             <h2>Karakteristikat kryesore:</h2>
-            <ul>
-                <li>🎧 <strong>Noise Cancelling:</strong> Dy procesorë që kontrollojnë 8 mikrofonë për izolim total.</li>
-                <li>🔋 <strong>Bateria:</strong> 30 orë dëgjim me ANC të ndezur (karikim i shpejtë: 3 orë dëgjim për 3 minuta karikim).</li>
-                <li>✨ <strong>Dizajni:</strong> Materiale soft-fit për rehati maksimale gjatë gjithë ditës.</li>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 15px;">🎧 <strong>Noise Cancelling:</strong> Dy procesorë që kontrollojnë 8 mikrofonë për izolim total.</li>
+                <li style="margin-bottom: 15px;">🔋 <strong>Bateria:</strong> 30 orë dëgjim me ANC të ndezur (karikim i shpejtë: 3 orë dëgjim për 3 minuta karikim).</li>
+                <li style="margin-bottom: 15px;">✨ <strong>Dizajni:</strong> Materiale soft-fit për rehati maksimale gjatë gjithë ditës.</li>
             </ul>
 
             <div style="text-align: center;">
-                <a href="reviews.html" class="back-link">← Kthehu te Tabela</a>
+                <a href="reviews.html" class="back-link">← Kthehu te Tabela e Reviews</a>
             </div>
         </article>
     </main>
+
+    <footer>
+        <div class="footer-names">
+            &copy; 2025 TechCrunch Blog - Punuar nga <b>Grejona</b> & <b>[Emri Yt]</b>
+        </div>
+        <p>Projekti Grupor | Blog Website | Lënda: Teknologji</p>
+        <div class="social-icons">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <a href="#"><i class="ri-github-line"></i></a>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
