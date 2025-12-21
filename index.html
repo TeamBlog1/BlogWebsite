@@ -3,52 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechCrunch Blog | Home</title>
-    <link rel="stylesheet" href="main.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>TechCrunch | Ballina</title>
+    <style>
+        /* KJO PJESË E HEQ BARDHËSINË NË KREJT FAQEN */
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* E detyron sfondin me u shtri deri ne fund te ekranit */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Fotoja rri fiks edhe nese ben scroll */
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .navbar {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a { color: white; text-decoration: none; font-weight: bold; }
+        .navbar a:hover { color: #c55151; }
+
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        h1 { font-size: 3.5rem; margin-bottom: 10px; color: white; }
+        p { font-size: 1.2rem; color: #ccc; }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 400px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .card h3 { color: white; margin-top: 0; }
+        .card p { font-size: 1rem; color: #ddd; }
+
+        .card a {
+            color: #c55151;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="logo">Tech<span>Crunch</span></a>
-            <div class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link active-link">Home</a></li>
-                    <li class="nav__item"><a href="reviews.html" class="nav__link">Reviews</a></li>
-                    <li class="nav__item"><a href="profile.html" class="nav__link">Profile</a></li>
-                    <li class="nav__item"><a href="signin.html" class="nav__link">Sign In</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <main class="main container" style="margin-top: 120px;">
-        <section class="home" style="text-align: center; padding: 40px 0;">
-            <h1 style="font-size: 3.5rem; color: var(--title-color);">Lajmet e fundit nga Teknologjia</h1>
-            <p style="color: var(--text-color); max-width: 600px; margin: 20px auto;">
-                Mirësevini në blogun tonë. Këtu do të gjeni rishikime të hollësishme (Reviews) dhe profilet e ekspertëve tanë.
-            </p>
-        </section>
+    <nav class="navbar">
+        <a href="index.html" style="color: #c55151; font-size: 1.5rem;">TechCrunch</a>
+        <a href="index.html">Home</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="profile.html">Profile</a>
+    </nav>
 
-        <section class="blog-preview" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 50px;">
-            <div style="background: var(--secondary-background-color); padding: 20px; border-radius: 10px; border: 1px solid #333;">
-                <h3>Tableta & Pajisje</h3>
-                <p>Lexoni vlerësimet tona të fundit në tabelën e produkteve.</p>
-                <a href="reviews.html" style="color: #c55151; font-weight: bold; text-decoration: none;">Shko te tabela →</a>
-            </div>
-            
-            <div style="background: var(--secondary-background-color); padding: 20px; border-radius: 10px; border: 1px solid #333;">
-                <h3>Autorët Tanë</h3>
-                <p>Njihuni me ekipin që qëndron prapa këtyre shkrimeve.</p>
-                <a href="profile.html" style="color: #c55151; font-weight: bold; text-decoration: none;">Shih Profilin →</a>
-            </div>
-        </section>
-    </main>
+    <div class="hero-section">
+        <h1>Lajmet e fundit nga Teknologjia</h1>
+        <p>Mirësevini në blogun tonë. Këtu do të gjeni rishikime të hollësishme dhe profilet e ekspertëve tanë.</p>
+    </div>
 
-    <footer style="margin-top: 100px; padding: 40px; text-align: center; border-top: 1px solid #333;">
-        <p>&copy; 2025 TechCrunch Blog Project. Punuar nga Grupi ynë.</p>
-    </footer>
+    <div class="cards-container">
+        <div class="card">
+            <h3>Tableta & Pajisje</h3>
+            <p>Lexoni vlerësimet tona të fundit në tabelën e produkteve.</p>
+            <a href="reviews.html">Shko te tabela →</a>
+        </div>
 
-    <script src="main.js"></script>
+        <div class="card">
+            <h3>Autorët Tanë</h3>
+            <p>Njihuni me ekipin që qëndron prapa këtyre shkrimeve.</p>
+            <a href="profile.html">Shih Profilin →</a>
+        </div>
+    </div>
+
 </body>
 </html>
