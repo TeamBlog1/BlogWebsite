@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title>Reviews | TechCrunch</title>
+</head>
+<body>
+    <main>
+        <section class="container" style="padding: 50px;">
+            <h2 style="text-align: center; margin-bottom: 20px;">Krahasimi i Teknologjive 2024</h2>
+            <table style="width: 100%; border-collapse: collapse; background: var(--secondary-background-color); color: var(--light-color);">
+                <thead>
+                    <tr style="background: #252830; color: white;">
+                        <th style="padding: 15px; border: 1px solid #444;">Teknologjia</th>
+                        <th style="padding: 15px; border: 1px solid #444;">Kategoria</th>
+                        <th style="padding: 15px; border: 1px solid #444;">Vlerësimi</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </section>
+    </main>
 
+    <script>
+        // Kodi yt JS për gjenerimin e të dhënave
+        const data = [
+            { name: "ChatGPT-4o", cat: "AI", rank: "9.5/10" },
+            { name: "Apple Intelligence", cat: "OS / AI", rank: "8.8/10" },
+            { name: "Meta Quest 3", cat: "VR", rank: "9.0/10" }
+        ];
+
+        const tbody = document.getElementById('table-body');
+        tbody.innerHTML = data.map(item => `
+            <tr>
+                <td style="padding: 12px; border: 1px solid #444;">${item.name}</td>
+                <td style="padding: 12px; border: 1px solid #444;">${item.cat}</td>
+                <td style="padding: 12px; border: 1px solid #444;">${item.rank}</td>
+            </tr>
+        `).join('');
+    </script>
+</body>
+</html>
