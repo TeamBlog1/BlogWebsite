@@ -5,109 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews | TechCrunch</title>
     <style>
-        /* KJO PJESË E HEQ BARDHËSINË */
+        /* KJO PJESË E HEQ BARDHËSINË DHE MBULON KREJT EKRANIN */
         html, body {
             margin: 0;
             padding: 0;
-            min-height: 100vh; /* E detyron sfondin me u shtri ne krejt listen */
+            width: 100%;
+            min-height: 100vh; /* E detyron sfondin të shtrihet deri në fund */
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
-                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-        .header {
-            background: rgba(15, 15, 20, 0.95);
-            padding: 20px 0;
+        /* NAVBAR MODERNE */
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
             border-bottom: 2px solid #c55151;
-            text-align: center;
         }
 
-        .header a {
+        nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
             transition: 0.3s;
         }
 
-        .header a:hover { color: #c55151; }
+        nav a:hover { color: #c55151; }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 50px auto;
             padding: 20px;
         }
 
-        h1 {
-            text-align: center;
-            color: #c55151;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-        }
+        h1 { text-align: center; color: #c55151; margin-bottom: 30px; }
 
         /* TABELA ME EFEKT XHAMI */
         table {
             width: 100%;
             border-collapse: collapse;
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(12px); /* Ky e ben efektin e turbullt prapa */
-            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        th {
-            background: #c55151;
-            color: white;
-            padding: 18px;
-            text-align: left;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-        }
-
-        td {
-            padding: 15px 18px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        tr:last-child td { border-bottom: none; }
-
-        tr:hover { background: rgba(255, 255, 255, 0.1); }
+        th { background: #c55151; padding: 15px; text-align: left; }
+        td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
 
         .read-btn {
             background: #c55151;
             color: white;
-            padding: 8px 16px;
+            padding: 6px 12px;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 4px;
             font-weight: bold;
-            font-size: 0.9rem;
-            transition: 0.3s;
-            display: inline-block;
         }
-
-        .read-btn:hover {
-            background: #a34141;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(197, 81, 81, 0.4);
-        }
-
-        .rating { color: #f1c40f; }
     </style>
 </head>
 <body>
 
-    <header class="header">
-        <a href="index.html" style="font-size: 1.5rem; color: #c55151; margin-right: 50px;">TechCrunch</a>
+    <nav>
         <a href="index.html">Home</a>
-        <a href="reviews.html" style="border-bottom: 2px solid #c55151;">Reviews</a>
+        <a href="reviews.html" style="color: #c55151;">Reviews</a>
         <a href="profile.html">Profile</a>
-    </header>
+    </nav>
 
     <main class="container">
         <h1>Rishikimet e Produkteve</h1>
@@ -125,27 +97,26 @@
                 <tr>
                     <td>iPhone 15 Pro</td>
                     <td>Smartphone</td>
-                    <td class="rating">⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
                     <td>999€</td>
                     <td><a href="post1.html" class="read-btn">Lexo</a></td>
                 </tr>
                 <tr>
                     <td>MacBook Air M2</td>
                     <td>Laptop</td>
-                    <td class="rating">⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
                     <td>1199€</td>
                     <td><a href="post2.html" class="read-btn">Lexo</a></td>
                 </tr>
                 <tr>
                     <td>Sony WH-1000XM5</td>
                     <td>Kufje</td>
-                    <td class="rating">⭐⭐⭐⭐☆</td>
+                    <td>⭐⭐⭐⭐☆</td>
                     <td>350€</td>
                     <td><a href="post3.html" class="read-btn">Lexo</a></td>
                 </tr>
             </tbody>
         </table>
     </main>
-
 </body>
 </html>
