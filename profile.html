@@ -3,48 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profili Im</title>
+    <title>Profili i Autorit | Blogu Im</title>
     <link rel="stylesheet" href="main.css">
     <style>
-        /* CSS3 Flexbox për layout */
+        /* CSS Grid & Flexbox (Pika 4) */
         .profile-main {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             padding: 50px;
+            background-color: #f8f9fa;
         }
+
         .card {
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 30px;
             text-align: center;
-            transition: 0.3s; 
+            transition: transform 0.3s ease; 
+            max-width: 600px;
+            margin-bottom: 30px;
         }
-        .card:hover { transform: scale(1.05); } 
+        .card:hover { transform: translateY(-5px); } 
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 15px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .skill-card {
+            background: #252830;
+            color: white;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .skill-card:hover { background: #c55151; }
+
+        .error-msg { color: #e74c3c; font-size: 13px; margin-top: 5px; }
+        .success-msg { color: #2ecc71; font-size: 13px; margin-top: 5px; }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">Ballina</a>
+        <nav style="padding: 20px; text-align: center;">
+            <a href="index.html" style="text-decoration: none; color: #333; font-weight: bold;">← Kthehu te Ballina</a>
         </nav>
     </header>
 
     <main class="profile-main">
         <section class="card">
-            <h1>Profili i Autorit</h1>
-            <p id="teksti">Mirësevini në pjesën time të projektit!</p>
-            <button id="btn-ndrysho">Më kliko</button>
+            <h1>Eksploro Punën e Autorit</h1>
+            <p id="teksti">Ky profil tregon aftësitë teknike të përdorura në këtë blog.</p>
+            <button id="btn-ndrysho" style="padding: 10px 20px; cursor: pointer;">Shfaq Statusin</button>
+        </section>
+
+        <section style="width:100%; max-width: 800px; text-align:center;">
+            <h2>Teknologjitë e Përdorura</h2>
+            <div id="skills-grid" class="skills-container"></div>
+        </section>
+
+        <section class="card" style="margin-top:40px;">
+            <h3>Na Kontaktoni</h3>
+            <p>Për çdo pyetje rreth artikujve, na shkruani:</p>
+            <div style="margin-top: 15px;">
+                <input type="email" id="emailInput" placeholder="Email-i juaj..." style="padding: 8px; width: 70%;">
+                <button onclick="validoFormen()" style="padding: 8px;">Dërgo</button>
+                <p id="msg" style="display:none;"></p>
+            </div>
         </section>
     </main>
 
     <script>
-        // JavaScript bazik (DOM manipulation)
+        // Pika 5: Manipulimi i DOM
         document.getElementById('btn-ndrysho').onclick = function() {
-            document.getElementById('teksti').innerHTML = "Bravo! JavaScript po punon.";
-            document.getElementById('teksti').style.color = "green";
+            const t = document.getElementById('teksti');
+            t.innerHTML = "Sistemi është plotësisht funksional dhe i validuar.";
+            t.style.fontWeight = "bold";
+            this.style.display = "none";
         };
+
+        // Pika 5: Array dhe Map (Kërkesë teknike)
+        const aftesite = ['HTML5 Semantics', 'CSS Grid', 'Flexbox Layout', 'JavaScript ES6', 'Git/GitHub'];
+        const grid = document.getElementById('skills-grid');
+
+        grid.innerHTML = aftesite.map(a => `
+            <div class="skill-card">${a}</div>
+        `).join('');
+
+        // Pika 5: Validimi i Formës (E detyrueshme për pikët)
+        function validoFormen() {
+            const email = document.getElementById('emailInput').value;
+            const msg = document.getElementById('msg');
+
+            if (email.includes('@') && email.length > 5) {
+                msg.innerHTML = "Mesazhi u procesua me sukses!";
+                msg.className = "success-msg";
+            } else {
+                msg.innerHTML = "Ju lutem shkruani një email valid.";
+                msg.className = "error-msg";
+            }
+            msg.style.display = "block";
+        }
     </script>
 </body>
-</html>
+</html
