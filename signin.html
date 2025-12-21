@@ -4,50 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In | TechCrunch</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="signin.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        /* Stilimi bazë për të mbuluar ekranin */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                        url('https://images.unsplash.com/photo-1451187534959-5e5667753e1e?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* NAVBAR MODERNE (E njëjtë si te faqet e tjera) */
+        nav {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            border-bottom: 3px solid #c55151;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: #c55151; }
+
+        .logo-nav {
+            color: #c55151 !important;
+            font-size: 1.5rem !important;
+            letter-spacing: 1px;
+            margin-right: 20px;
+        }
+
+        /* KONTEJNERI QË QËNDRON NË MES */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .signin-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        .signin-card h2 { color: #c55151; margin-bottom: 25px; font-size: 2rem; }
+
+        .input-group { text-align: left; margin-bottom: 15px; }
+        
+        label { display: block; margin-bottom: 5px; color: #ccc; font-size: 0.9rem; }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: white;
+            box-sizing: border-box;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus { border-color: #c55151; background: rgba(255,255,255,0.15); }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: #c55151;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover { background: #e06060; transform: translateY(-2px); }
+
+        /* FOOTER */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: #888;
+            text-align: center;
+            padding: 30px 0;
+            border-top: 2px solid #c55151;
+        }
+
+        .footer-names { color: #ffffff; margin-bottom: 10px; }
+        .footer-names b { color: #c55151; }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="logo">TechCrunch</a>
-            <div class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="reviews.html" class="nav__link">Reviews</a></li>
-                    <li class="nav__item"><a href="profile.html" class="nav__link">Profile</a></li>
-                    <li class="nav__item"><a href="signin.html" class="nav__link active-link">Sign In</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <main class="main container" style="margin-top: 120px; display: flex; justify-content: center;">
-        <div class="signin-card" style="background: var(--secondary-background-color); padding: 40px; border-radius: 15px; width: 100%; max-width: 400px; border: 1px solid #444;">
-            <h2 style="color: var(--title-color); text-align: center; margin-bottom: 20px;">Mirësevini</h2>
+    <nav>
+        <a href="index.html" class="logo-nav">TechCrunch</a>
+        <a href="index.html">Home</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="profile.html">Profile</a>
+        <a href="signin.html" style="color: #c55151;">Sign In</a>
+    </nav>
+
+    <main class="main-content">
+        <div class="signin-card">
+            <i class="ri-user-3-line" style="font-size: 3rem; color: #c55151;"></i>
+            <h2>Mirësevini</h2>
             
             <form id="loginForm">
-                <div style="margin-bottom: 15px;">
-                    <label style="color: var(--text-color); display: block; margin-bottom: 5px;">Email</label>
-                    <input type="email" id="email" placeholder="email@shembull.com" 
-                           style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #555; background: #1f2229; color: white;">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="email@shembull.com" required>
                 </div>
 
-                <div style="margin-bottom: 20px;">
-                    <label style="color: var(--text-color); display: block; margin-bottom: 5px;">Fjalëkalimi</label>
-                    <input type="password" id="password" placeholder="******" 
-                           style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #555; background: #1f2229; color: white;">
+                <div class="input-group">
+                    <label>Fjalëkalimi</label>
+                    <input type="password" id="password" placeholder="******" required>
                 </div>
 
-                <button type="submit" style="width: 100%; padding: 12px; background: #c55151; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
-                    Log In
-                </button>
+                <button type="submit" class="login-btn">Log In</button>
                 
-                <p id="error-msg" style="color: #ff4d4d; font-size: 14px; margin-top: 15px; text-align: center; display: none;"></p>
-                <p id="success-msg" style="color: #2ecc71; font-size: 14px; margin-top: 15px; text-align: center; display: none;"></p>
+                <p id="error-msg" style="color: #ff4d4d; font-size: 14px; margin-top: 15px; display: none;"></p>
+                <p id="success-msg" style="color: #2ecc71; font-size: 14px; margin-top: 15px; display: none;"></p>
             </form>
         </div>
     </main>
+
+    <footer>
+        <div class="footer-names">
+            &copy; 2025 TechCrunch Blog - Punuar nga <b>Grejona</b> & <b>Jeta</b>
+        </div>
+        <p>Projekti Grupor | Faqja e Kyçjes</p>
+    </footer>
 
     <script src="signin.js"></script>
 </body>
