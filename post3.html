@@ -7,31 +7,86 @@
     <link rel="stylesheet" href="main.css">
     <style>
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             color: #ffffff;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                        url('https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1920&q=80');
+            /* FOTOJA E SFONDIT PËR KUFJE */
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                        url('https://images.unsplash.com/photo-1546435770-a3e426bf472b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-        /* ... të njëjtat stile si më lart ... */
-        .header { background: rgba(26, 28, 34, 0.95); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #c55151; }
-        .container { max-width: 800px; margin: 120px auto 50px auto; background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .highlight-box { background: rgba(197, 81, 81, 0.1); padding: 20px; border-radius: 10px; border-left: 5px solid #c55151; margin-bottom: 30px; color: white; }
-        h1 { color: #c55151; }
-        .back-link { display: inline-block; margin-top: 40px; color: #ffffff; text-decoration: none; background: #c55151; padding: 10px 20px; border-radius: 5px; }
+
+        .header {
+            background: rgba(20, 20, 25, 0.95);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #c55151;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 120px auto 50px auto;
+            background: rgba(255, 255, 255, 0.05); 
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        h1 { color: #c55151; font-size: 2.8rem; margin-top: 0; }
+        h2 { color: #c55151; border-bottom: 1px solid #c55151; padding-bottom: 5px; }
+        p { color: #f0f0f0; font-size: 1.15rem; }
+
+        .highlight-box {
+            background: rgba(197, 81, 81, 0.15); 
+            padding: 25px; 
+            border-radius: 12px; 
+            border-left: 6px solid #c55151; 
+            margin: 30px 0;
+        }
+
+        .highlight-box p {
+            color: #ffffff !important;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        ul { list-style: none; padding: 0; }
+        ul li { margin-bottom: 15px; font-size: 1.1rem; }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: #ffffff;
+            text-decoration: none;
+            background: #c55151;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            background: #e06060;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <nav style="display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
             <a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: bold; font-size: 1.8rem;">Tech<span style="color: #c55151;">Crunch</span></a>
-            <ul style="list-style: none; display: flex; gap: 30px;">
-                <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
-                <li><a href="reviews.html" style="color: white; text-decoration: none;">Reviews</a></li>
+            <ul style="list-style: none; display: flex; gap: 30px; margin: 0; padding: 0;">
+                <li><a href="index.html" style="text-decoration: none; color: #ffffff;">Home</a></li>
+                <li><a href="reviews.html" style="text-decoration: none; color: #ffffff;">Reviews</a></li>
             </ul>
         </nav>
     </header>
@@ -39,23 +94,25 @@
     <main class="container">
         <article>
             <h1>Sony WH-1000XM5: Mbreti i heshtjes</h1>
-            <p style="color: #bbb;">Publikuar më: 19 Dhjetor, 2025</p>
+            <p style="color: #bbb; font-size: 0.9rem;">19 Dhjetor, 2025 • Rishikuar nga Autori</p>
             
             <div class="highlight-box">
-                <p><i>"Nëse doni të izoloni botën dhe të dëgjoni vetëm muzikën tuaj, këto janë kufjet që ju duhen."</i></p>
+                <p>"Nuk ka rëndësi sa zhurmë ka jashtë, me këto kufje jeni vetëm ju dhe muzika juaj. Izolimi i zhurmës është thjesht magjik."</p>
             </div>
 
-            <p>Sistemi i anulimit të zhurmës (Noise Cancelling) te Sony XM5 është i pakonkurrueshëm. Janë perfekte për udhëtime në aeroplan ose kur punoni në një ambient të zhurmshëm.</p>
+            <p>
+                Sony ka arritur të përmirësojë përsëri atë që dukej e pamundur. Modeli WH-1000XM5 vjen me një dizajm më elegant dhe me një sistem të ri mikrofonash që e bëjnë kualitetin e thirrjeve më të mirin në treg.
+            </p>
 
-            <h2 style="color: #c55151;">Pikat e Forta:</h2>
+            <h2>Karakteristikat kryesore:</h2>
             <ul>
-                <li>✅ Izolimi i zhurmës më i miri në botë.</li>
-                <li>✅ Cilësi audio hi-res.</li>
-                <li>✅ Shume komode për t'u mbajtur gjatë.</li>
+                <li>🎧 <strong>Noise Cancelling:</strong> Dy procesorë që kontrollojnë 8 mikrofonë për izolim total.</li>
+                <li>🔋 <strong>Bateria:</strong> 30 orë dëgjim me ANC të ndezur (karikim i shpejtë: 3 orë dëgjim për 3 minuta karikim).</li>
+                <li>✨ <strong>Dizajni:</strong> Materiale soft-fit për rehati maksimale gjatë gjithë ditës.</li>
             </ul>
 
             <div style="text-align: center;">
-                <a href="reviews.html" class="back-link">← Kthehu te Reviews</a>
+                <a href="reviews.html" class="back-link">← Kthehu te Tabela</a>
             </div>
         </article>
     </main>
