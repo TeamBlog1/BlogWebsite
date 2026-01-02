@@ -1,73 +1,30 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Blog Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Përshkrimi i projektit
+Ky është një projekt **Blog Website** i krijuar si pjesë e kërkesave të kursit. Qëllimi i tij është të demonstrojë një faqe web funksionale me përmbajtje të ndryshme dhe një sistem bazik të regjistrimit/hyrjes nëpërmjet React për **signin**.
 
-## Available Scripts
+Projekti përmban një strukturë të thjeshtë dhe të pastër HTML/CSS për faqet kryesore, ndërsa për formën e **signin** është përdorur React për të treguar njohuritë në zhvillimin e komponentëve interaktivë dhe menaxhimin e state-it.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Faqet e projektit
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **index.html** – Faqja kryesore e blogut me informacion bazik dhe navigim.
+2. **reviews.html** – Faqe për komente dhe rishikime nga përdoruesit.
+3. **news.html** – Faqe me lajme të përditësuara.
+4. **contact.html** – Formular për kontakt
+5. **signin** – Faqja e regjistrimit/hyrjes është krijuar me **React** për të treguar aftësitë në krijimin e komponentëve interaktivë.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Teknologjitë e përdorura
+- **HTML5 & CSS3** – Për strukturën dhe dizajnin e faqeve.
+- **JavaScript** – Për funksionalitete bazike.
+- **React** – Për komponentin e signin, duke treguar aftësi në zhvillimin modern të aplikacioneve web.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-
+## Udhëzime për përdorim
+1. Klono këtë repo në kompjuterin tuaj:
+   ```bash
+   git clone https://github.com/EmriJuaj/BlogWebsite.git
