@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - TechCrunch</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        
+        .reviews-container {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+
+        
+        .review-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .user-avatar {
+            width: 45px;
+            height: 45px;
+            background: #00ba44; 
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .stars { color: #ffb400; margin: 10px 0; }
+
+        
+        .review-form {
+            background: #f9f9f9;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .btn-submit {
+            background: #00ba44;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .btn-submit:hover { background: #008f35; }
+    </style>
+</head>
+<body>
+ <header class="header" id="header">
+    <nav class="navbar container">
+
+        <a href="./blog.html">
+            <h2 class="logo">TechCrunch</h2>
+        </a>
+
+        <div class="menu" id="menu">
+            <ul class="list">
+                <li class="list-item">
+                    <a href="#" class="list-link current">Home</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">Categories</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">Reviews</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">News</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">Membership</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">Contact</a>
+                </li>
+                <li class="list-item screen-lg-hidden">
+                    <a href="signin.html" target="_blank" class="list-link">Log in</a>
+                </li>
+                <li class="list-item screen-lg-hidden">
+                    <a href="signin.html" target="_blank" class="list-link">Sign up</a>
+                </li>
+            </ul>
+        </div>
+        <div class="list list-right">
+            <button class="btn place-items-center" id="theme-toggle-btn">
+                <i class="ri-sun-line sun-icon"></i>
+                <i class="ri-moon-line moon-icon"></i>
+            </button>
+
+            <button class="btn place-items-center" id="search-icon">
+                <i class="ri-search-line"></i>
+            </button>
+
+            <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-icon">
+                <i class="ri-menu-3-line open-menu-icon"></i>
+                <i class="ri-close-line close-menu-icon"></i>
+            </button>
+            <a href="signin.html" target="_blank" class="list-link screen-sm-hidden">Sign in</a>
+            <a href="signin.html" target="_blank" class="btn sign-up-btn fancy-border screen-sm-hidden">
+                <span>Sign up</span>
+            </a>
+        </div>
+        
+    </nav>
+</header>
+    <section class="reviews-container">
+        <h2>Reader Reviews</h2>
+        
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="user-info">
+                    <div class="user-avatar">AG</div>
+                    <div class="user-details">
+                        <h4>Agon Gashi</h4>
+                        <p>Verified Reader</p>
+                    </div>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p>"The VR article was mind-blowing! Great job."</p>
+            </div>
+
+            <div class="review-card">
+                <div class="user-info">
+                    <div class="user-avatar">SH</div>
+                    <div class="user-details">
+                        <h4>Sara Hoxha</h4>
+                        <p>Verified Reader</p>
+                    </div>
+                </div>
+                <div class="stars">★★★★☆</div>
+                <p>"Very clean UI. I love the new updates."</p>
+            </div>
+        </div>
+
+        <div class="review-form">
+            <h3>Write a Review</h3>
+            <div class="form-group">
+                <input type="text" id="userName" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <textarea id="userFeedback" rows="4" placeholder="Your Feedback..."></textarea>
+            </div>
+            <button type="button" class="btn-submit" id="submitBtn">Submit Review</button>
+        </div>
+    </section>
+    <!--Footer-->
+<footer class="footer section">
+
+    <div class="footer-container container d-grid">
+
+        <div class="company-data">
+
+            <a href="./blog.html">
+                <h2 class="logo">TechCrunch</h2>
+            </a>
+            <p class="company-description">
+                TechCrunch is a leading technology news site that delivers the latest insights and updates from the world of tech innovation. With a focus on startups, gadgets, and industry trends, we provide in-depth analysis, exclusive interviews, and breaking news to keep readers informed. 
+            </p>
+
+            <ul class="list social-media">
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="#" class="list-link">
+                        <i class="ri-facebook-circle-line"></i>
+                    </a>
+                    <a href="#" class="list-link">
+                        <i class="ri-twitter-line"></i>
+                    </a>
+                    
+                </li>
+            </ul>
+            <span class="copyright-notice">&copy; 2024 TechCrunch. All rights reserved.</span>
+        </div>
+
+        <div class="categories">
+            <h6 class="title footer-title">Categories</h6>
+
+            <ul class="list footer-list">
+                <li class="list-item">
+                    <a href="#" class="list-link">Mobiles</a>
+                    <a href="#" class="list-link">Science</a>
+                    <a href="#" class="list-link">Entertainment</a>
+                    <a href="#" class="list-link">CryptoCurrency</a>
+                    <a href="#" class="list-link">Internet</a>
+                    <a href="#" class="list-link">AI</a>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div class="categories">
+            <h6 class="title footer-title">Company</h6>
+
+            <ul class="footer-list list">
+                <li class="list-item">
+                    <a href="#" class="list-link">Contact us</a>
+                    <a href="#" class="list-link">F.A.Q</a>
+                    <a href="#" class="list-link">Careers</a>
+                    <a href="#" class="list-link">Authors</a>
+                    <a href="#" class="list-link">Memberships</a>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div class="categories"> 
+            <h6 class="title footer-title">Useful links</h6>
+
+            <ul class="list footer-list">
+                <li class="list-item">
+                    <a href="index.html" class="list-link">Home</a>
+                    <a href="categories.html" class="list-link">Categories</a>
+                    <a href="reviews.html" class="list-link">Reviews</a>
+                    <a href="news.html" class="list-link">News</a>
+                    <a href="contactus.html" class="list-link">Contact us</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</footer>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const name = document.getElementById('userName').value;
+            if(name === "") {
+                alert("Please enter your name!");
+            } else {
+                alert("Thank you, " + name + "! Your review has been submitted.");
+                document.getElementById('userName').value = "";
+                document.getElementById('userFeedback').value = "";
+            }
+        });
+    </script>
+
+</body>
+</html>
