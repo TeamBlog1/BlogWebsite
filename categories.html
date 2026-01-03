@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <title>Kategorite - BlogWebsite</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="main.css">
     <style>
         /*Reseti dhe variablat*/
         :root {
@@ -43,44 +47,6 @@
             display: block;
         }
 
-        /*HEADER*/
-        .header {
-            background-color: var(--secondary-background-color);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 999;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1.5rem 5%;
-        }
-
-        .logo {
-            font-size: var(--font-size-md);
-            color: var(--light-color);
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .list {
-            display: flex;
-            gap: var(--gap);
-        }
-
-        .list-link {
-            transition: 0.3s;
-            font-size: 1.1rem;
-        }
-
-            .list-link:hover, .list-link.current {
-                color: var(--light-color);
-            }
 
         /*Permbajtja*/
         .main-content {
@@ -103,6 +69,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
             gap: var(--gap);
+            margin-bottom: 30px;
         }
 
         .category-card {
@@ -154,28 +121,74 @@
                 color: var(--light-color);
                 transform: translateX(5px);
             }
-
-        /*FOOTER*/
-        .footer {
-            background-color: var(--secondary-background-color);
-            padding: 3rem 5%;
-            margin-top: 5rem;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <a href="index.html" class="logo">BlogWebsite</a>
-            <ul class="list">
-                <li><a href="index.html" class="list-link">Ballina</a></li>
-                <li><a href="categories.html" class="list-link current">Kategorite</a></li>
-                <li><a href="#" class="list-link">Rreth Nesh</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header -->
+<header class="header" id="header">
+    <nav class="navbar container">
 
+        <a href="./blog.html">
+            <h2 class="logo">TechCrunch</h2>
+        </a>
+
+        <div class="menu" id="menu">
+            <ul class="list">
+                <li class="list-item"><a href="index.html" class="list-link">Home</a></li>
+                <li class="list-item"><a href="categories.html" class="list-link">Categories</a></li>
+                <li class="list-item"><a href="reviews.html" class="list-link">Reviews</a></li>
+                <li class="list-item"><a href="news.html" class="list-link current">News</a></li>
+                <li class="list-item"><a href="contactus.html" class="list-link">Contact</a></li>
+                <li class="list-item screen-lg-hidden">
+                    <a href="signin.html" target="_blank" class="list-link">Log in</a>
+                </li>
+                <li class="list-item screen-lg-hidden">
+                    <a href="signin.html" target="_blank" class="list-link">Sign up</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="list list-right">
+            <button class="btn place-items-center" id="theme-toggle-btn">
+                <i class="ri-sun-line sun-icon"></i>
+                <i class="ri-moon-line moon-icon"></i>
+            </button>
+
+            <button class="btn place-items-center" id="search-icon">
+                <i class="ri-search-line"></i>
+            </button>
+
+            <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-icon">
+                <i class="ri-menu-3-line open-menu-icon"></i>
+                <i class="ri-close-line close-menu-icon"></i>
+            </button>
+            <a href="signin.html" target="_blank" class="list-link screen-sm-hidden">Sign in</a>
+            <a href="signin.html" target="_blank" class="btn sign-up-btn fancy-border screen-sm-hidden">
+                <span>Sign up</span>
+            </a>
+        </div>
+
+    </nav>
+</header>
+<!-- Search -->
+ <div class="search-form-container container" id="search-form-container">
+
+    <div class="form-container-inner">
+
+        <form action="" class="form">
+            <input class="form-input" type="text" placeholder="What are you looking for?">
+            <button class="btn form-btn" type="submit">
+                <i class="ri-search-line"></i>
+            </button>
+        </form>
+        <span class="form-note">Or press ESC to close.</span>
+
+    </div>
+
+    <button class="btn form-close-btn place-items-center" id="form-close-btn">
+        <i class="ri-close-line"></i>
+    </button>
+</div>
     <main class="main-content">
         <h1 class="section-title">Kategorite e Lajmeve</h1>
 
@@ -310,6 +323,9 @@
     </div>
 
 </footer>
+
+
+<script src="main.js"></script>
 
 </body>
 </html>
