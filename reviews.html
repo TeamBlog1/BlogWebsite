@@ -3,129 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechCrunch | Reviews</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Reviews - TechCrunch</title>
     <link rel="stylesheet" href="main.css">
-    
     <style>
+        
         .reviews-container {
-            padding: 40px 0;
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            font-family: 'Segoe UI', sans-serif;
         }
-        .reviews-grid {
+
+        .review-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 30px;
+            gap: 25px;
+            margin-bottom: 50px;
         }
+
+        
         .review-card {
             background: #fff;
             padding: 25px;
-            border-radius: 10px;
-            border: 1px solid #ececec;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
         }
-        .review-header {
+
+        .user-info {
             display: flex;
             align-items: center;
-            gap: 15px;
             margin-bottom: 15px;
         }
-        .avatar-circle {
+
+        .user-avatar {
             width: 45px;
             height: 45px;
-            background: #00bb2d;
+            background: #00ba44; /* Ngjyra e gjelbër TechCrunch */
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            margin-right: 15px;
         }
-        .stars-gold {
-            color: #f1c40f;
-            margin-bottom: 10px;
-        }
+
+        .stars { color: #ffb400; margin: 10px 0; }
+
+        /* Formulari i dërgimit */
         .review-form {
-            margin-top: 60px;
-            background: #fcfcfc;
-            padding: 30px;
-            border-radius: 10px;
+            background: #f9f9f9;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
         }
-        .form-input-field {
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-group input, .form-group textarea {
             width: 100%;
             padding: 12px;
-            margin-top: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
         }
+
+        .btn-submit {
+            background: #00ba44;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .btn-submit:hover { background: #008f35; }
     </style>
 </head>
 <body>
-    
-    <header class="header" id="header">
-        <nav class="navbar container">
-            <a href="./blog.html"><h2 class="logo">TechCrunch</h2></a>
-            <div class="menu">
-                <ul class="list">
-                    <li class="list-item"><a href="blog.html" class="list-link">Home</a></li>
-                    <li class="list-item"><a href="reviews.html" class="list-link current">Reviews</a></li>
-                    <li class="list-item"><a href="news.html" class="list-link">News</a></li>
-                    <li class="list-item"><a href="#" class="list-link">Categories</a></li>
-                    <li class="list-item"><a href="#" class="list-link">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <section class="reviews-container container">
-        <h2 class="title section-title" data-name="Reviews">Community Feedback</h2>
-
-        <div class="reviews-grid">
+    <section class="reviews-container">
+        <h2>Reader Reviews</h2>
+        
+        <div class="review-grid">
             <div class="review-card">
-                <div class="review-header">
-                    <div class="avatar-circle">AG</div>
-                    <div>
-                        <h4 class="title">Agon Gashi</h4>
-                        <small>Verified Reader</small>
+                <div class="user-info">
+                    <div class="user-avatar">AG</div>
+                    <div class="user-details">
+                        <h4>Agon Gashi</h4>
+                        <p>Verified Reader</p>
                     </div>
                 </div>
-                <div class="stars-gold">
-                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                </div>
-                <p>"The VR article was mind-blowing! I love how TechCrunch covers the future of headsets."</p>
+                <div class="stars">★★★★★</div>
+                <p>"The VR article was mind-blowing! Great job."</p>
             </div>
 
             <div class="review-card">
-                <div class="review-header">
-                    <div class="avatar-circle">SH</div>
-                    <div>
-                        <h4 class="title">Sara Hoxha</h4>
-                        <small>Verified Reader</small>
+                <div class="user-info">
+                    <div class="user-avatar">SH</div>
+                    <div class="user-details">
+                        <h4>Sara Hoxha</h4>
+                        <p>Verified Reader</p>
                     </div>
                 </div>
-                <div class="stars-gold">
-                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-line"></i>
-                </div>
-                <p>"Very clean UI. The news updates are fast and reliable. Keep up the good work!"</p>
+                <div class="stars">★★★★☆</div>
+                <p>"Very clean UI. I love the new updates."</p>
             </div>
         </div>
 
         <div class="review-form">
-            <h3 class="title">Write a Review</h3>
-            <form>
-                <input type="text" placeholder="Your Name" class="form-input-field">
-                <textarea placeholder="Your Feedback..." class="form-input-field" style="height: 100px;"></textarea>
-                <button type="button" class="btn" style="background: #00bb2d; color: #fff; padding: 10px 25px; margin-top: 15px; border: none; border-radius: 5px; cursor: pointer;">Submit Review</button>
-            </form>
+            <h3>Write a Review</h3>
+            <div class="form-group">
+                <input type="text" id="userName" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <textarea id="userFeedback" rows="4" placeholder="Your Feedback..."></textarea>
+            </div>
+            <button type="button" class="btn-submit" id="submitBtn">Submit Review</button>
         </div>
     </section>
 
-    <footer class="footer section">
-        <div class="container" style="text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
-            <p>&copy; 2024 TechCrunch - Team Project</p>
-        </div>
-    </footer>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const name = document.getElementById('userName').value;
+            if(name === "") {
+                alert("Please enter your name!");
+            } else {
+                alert("Thank you, " + name + "! Your review has been submitted.");
+                document.getElementById('userName').value = "";
+                document.getElementById('userFeedback').value = "";
+            }
+        });
+    </script>
 
 </body>
 </html>
