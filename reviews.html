@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - TechCrunch</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        
+        .reviews-container {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        
+        .review-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .user-avatar {
+            width: 45px;
+            height: 45px;
+            background: #00ba44; /* Ngjyra e gjelbër TechCrunch */
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .stars { color: #ffb400; margin: 10px 0; }
+
+        /* Formulari i dërgimit */
+        .review-form {
+            background: #f9f9f9;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .btn-submit {
+            background: #00ba44;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .btn-submit:hover { background: #008f35; }
+    </style>
+</head>
+<body>
+
+    <section class="reviews-container">
+        <h2>Reader Reviews</h2>
+        
+        <div class="review-grid">
+            <div class="review-card">
+                <div class="user-info">
+                    <div class="user-avatar">AG</div>
+                    <div class="user-details">
+                        <h4>Agon Gashi</h4>
+                        <p>Verified Reader</p>
+                    </div>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p>"The VR article was mind-blowing! Great job."</p>
+            </div>
+
+            <div class="review-card">
+                <div class="user-info">
+                    <div class="user-avatar">SH</div>
+                    <div class="user-details">
+                        <h4>Sara Hoxha</h4>
+                        <p>Verified Reader</p>
+                    </div>
+                </div>
+                <div class="stars">★★★★☆</div>
+                <p>"Very clean UI. I love the new updates."</p>
+            </div>
+        </div>
+
+        <div class="review-form">
+            <h3>Write a Review</h3>
+            <div class="form-group">
+                <input type="text" id="userName" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <textarea id="userFeedback" rows="4" placeholder="Your Feedback..."></textarea>
+            </div>
+            <button type="button" class="btn-submit" id="submitBtn">Submit Review</button>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const name = document.getElementById('userName').value;
+            if(name === "") {
+                alert("Please enter your name!");
+            } else {
+                alert("Thank you, " + name + "! Your review has been submitted.");
+                document.getElementById('userName').value = "";
+                document.getElementById('userFeedback').value = "";
+            }
+        });
+    </script>
+
+</body>
+</html>
