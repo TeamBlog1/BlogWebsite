@@ -11,8 +11,8 @@
 </head>
 <body>
     
-<!-- Header -->
-<header class="header" id="header">
+  <!--Header-->
+    <header class="header" id="header">
     <nav class="navbar container">
 
         <a href="./blog.html">
@@ -21,14 +21,29 @@
 
         <div class="menu" id="menu">
             <ul class="list">
-                <li class="list-item"><a href="index.html" class="list-link">Home</a></li>
-                <li class="list-item"><a href="categories.html" class="list-link">Categories</a></li>
-                <li class="list-item"><a href="reviews.html" class="list-link">Reviews</a></li>
-                <li class="list-item"><a href="news.html" class="list-link current">News</a></li>
-                <li class="list-item"><a href="contactus.html" class="list-link">Contact</a></li>
+                <li class="list-item">
+                    <a href="index.html" class="list-link current">Home</a>
+                </li>
+                <li class="list-item">
+                    <a href="categories.html" class="list-link">Categories</a>
+                </li>
+                <li class="list-item">
+                    <a href="reviews.html" class="list-link">Reviews</a>
+                </li>
+                <li class="list-item">
+                    <a href="news.html" class="list-link">News</a>
+                </li>
+                <li class="list-item">
+                    <a href="contactus.html" class="list-link">Contact</a>
+                </li>
+                <li class="list-item screen-lg-hidden">
+                    <a href="signin.html" target="_blank" class="list-link">Log in</a>
+                </li>
+                <li class="list-item screen-lg-hidden">
+                    <a href="signin.html" target="_blank" class="list-link">Sign up</a>
+                </li>
             </ul>
         </div>
-
         <div class="list list-right">
             <button class="btn place-items-center" id="theme-toggle-btn">
                 <i class="ri-sun-line sun-icon"></i>
@@ -43,14 +58,19 @@
                 <i class="ri-menu-3-line open-menu-icon"></i>
                 <i class="ri-close-line close-menu-icon"></i>
             </button>
+            <a href="signin.html" target="_blank" class="list-link screen-sm-hidden">Sign in</a>
+            <a href="signin.html" target="_blank" class="btn sign-up-btn fancy-border screen-sm-hidden">
+                <span>Sign up</span>
+            </a>
         </div>
-
+        
     </nav>
 </header>
+ <!-- Search -->
+ <div class="search-form-container container" id="search-form-container">
 
-<!-- Search -->
-<div class="search-form-container container" id="search-form-container">
     <div class="form-container-inner">
+
         <form action="" class="form">
             <input class="form-input" type="text" placeholder="What are you looking for?">
             <button class="btn form-btn" type="submit">
@@ -58,12 +78,14 @@
             </button>
         </form>
         <span class="form-note">Or press ESC to close.</span>
+
     </div>
 
     <button class="btn form-close-btn place-items-center" id="form-close-btn">
         <i class="ri-close-line"></i>
     </button>
 </div>
+
 
 <!-- NEWS CONTENT -->
 <section class="section">
