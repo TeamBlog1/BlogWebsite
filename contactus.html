@@ -3,85 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - TechCrunch</title>
+    <title>Contact Us</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="main.css">
 
     <style>
-        /* Reset & basic */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+     
 
-        body {
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Header */
-        .header {
-            background-color: #0b0b0b;
-            color: #fff;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar.container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        /* Menu */
-        .menu ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .list-link {
-            color: #fff;
-            padding: 5px 10px;
-            transition: background 0.3s, color 0.3s;
-        }
-
-            .list-link:hover,
-            .list-link.current {
-                background-color: #fff;
-                color: #0b0b0b;
-                border-radius: 4px;
-            }
-
-        /* Hamburger icon */
-        .hamburger {
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-        }
 
         /* Main section */
         main {
+            margin-top: 40px;
             padding: 50px 20px;
             display: flex;
             justify-content: center;
@@ -91,6 +25,7 @@
                 background-color: #fff;
                 padding: 40px;
                 border-radius: 10px;
+                border: 2px solid rgb(81, 79, 79);
                 box-shadow: 0 4px 15px rgba(0,0,0,0.1);
                 width: 100%;
                 max-width: 600px;
@@ -101,6 +36,7 @@
                 margin-bottom: 10px;
                 font-size: 28px;
                 text-align: center;
+                color: #0b0b0b;
             }
 
             main p {
@@ -113,6 +49,7 @@
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
+            color: #0b0b0b;
         }
 
         form input,
@@ -147,15 +84,6 @@
             form button:hover {
                 background-color: #333;
             }
-
-        /* Footer */
-        .footer {
-            background-color: #0b0b0b;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 50px;
-        }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -299,7 +227,7 @@
 
         <div class="company-data">
 
-            <a href="./blog.html">
+            <a href="./index.html">
                 <h2 class="logo">TechCrunch</h2>
             </a>
             <p class="company-description">
@@ -380,6 +308,8 @@
             navList.classList.toggle('show');
         });
     </script>
+<script src="main.js"></script>
+
 
 </body>
 </html>
